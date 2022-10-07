@@ -109,6 +109,7 @@ export class ButtonDelivery extends ContentDelivery {
     const customKeys = Object.keys(entryFields).filter(
       (field: string) => !buttonAttributes.includes(field)
     )
+    button.customFields = {}
     for (const customKey of customKeys) {
       button.customFields[customKey] = (entryFields as any)[customKey]
     }
